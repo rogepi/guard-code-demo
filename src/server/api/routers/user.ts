@@ -17,7 +17,7 @@ export const userRouter = createTRPCRouter({
       }
       return {
         ok: user?.password === input.password,
-        codeSalt: user?.guardSalt as string
+        codeSalt: user?.guardSalt
       }
     }),
   signInByCode: publicProcedure
@@ -31,10 +31,10 @@ export const userRouter = createTRPCRouter({
         message: "User not found"
       }
 
-      console.log(generateCode(user?.guardSalt as string), input.code)
+      console.log(generateCode(user?.guardSalt ), input.code)
       return {
-        ok: generateCode(user?.guardSalt as string) === input.code,
-        codeSalt: user?.guardSalt as string
+        ok: generateCode(user?.guardSalt ) === input.code,
+        codeSalt: user?.guardSalt
       }
     })
   ,

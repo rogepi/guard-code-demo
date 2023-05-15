@@ -17,11 +17,11 @@ const Code: NextPage = () => {
     location.replace("/");
   };
 
-  React.useEffect(() => {
-    if (counter === 0) {
-      setCode(generateCode(codeSalt));
-    }
-  }, [counter]);
+
+  if (counter === 0) {
+    setCode(generateCode(codeSalt));
+  }
+
 
   return (
     <>
