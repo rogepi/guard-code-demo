@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import LoginForm from "~/components/LoginForm";
+import UserForm from "~/components/userForm";
 
 const Home: NextPage = () => {
   return (
@@ -15,7 +15,7 @@ const Home: NextPage = () => {
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             Guard <span className="text-[hsl(280,100%,70%)]">Code</span> Demo
           </h1>
-          <LoginForm />
+          <UserForm />
         </div>
       </main>
     </>
