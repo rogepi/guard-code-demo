@@ -8,7 +8,7 @@ import AuthProvider from "~/components/auth-provider";
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <AuthProvider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </AuthProvider>
   );
 };
